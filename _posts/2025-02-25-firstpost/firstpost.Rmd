@@ -1,0 +1,36 @@
+---
+title: "First_Post"
+description: |
+  This plot shows the relationship between mpg and wt, colored by cyl (number of cylinders).
+author:
+   Erick Njue
+date: 2025-02-25
+output:
+  distill::distill_article:
+    self_contained: false
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(ggplot2)
+```
+This plot shows the relationship between mpg and wt, colored by cyl (number of cylinders).
+
+```{r}
+
+ggplot(mtcars, aes(x = wt, y = mpg, color = as.factor(cyl))) +
+  geom_point(size = 3, alpha = 0.7) +
+  geom_smooth(method = "lm", se = FALSE, linetype = "dashed") +
+  labs(title = "Miles Per Gallon vs. Weight",
+       x = "Weight (1000 lbs)",
+       y = "Miles Per Gallon",
+       color = "Cylinders") +
+  theme_minimal()
+
+```
+
+
+
+
+

@@ -1,0 +1,32 @@
+---
+title: "Second_Post"
+description: |
+  This boxplot compares mpg across different cylinder counts.
+author:
+  Erick Njue
+date: 2025-02-25
+output:
+  distill::distill_article:
+    self_contained: false
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(ggplot2)
+```
+This boxplot compares mpg across different cylinder counts.
+
+```{r}
+ggplot(mtcars, aes(x = as.factor(cyl), y = mpg, fill = as.factor(cyl))) +
+  geom_boxplot() +
+  labs(title = "MPG Distribution by Cylinder Count",
+       x = "Cylinders",
+       y = "Miles Per Gallon",
+       fill = "Cylinders") +
+  theme_minimal()
+
+```
+
+
+
