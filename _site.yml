@@ -2,7 +2,7 @@ name: "njue"
 title: "Erick's Blog"
 description: |
   Erick's Blog
-output_dir: "_site"
+output_dir: "doc"
 navbar:
   right:
     - text: "Home"
